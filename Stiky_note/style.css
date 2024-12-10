@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  height: 90vh;
+  width: 90vw;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 12px;
+  border-radius: 14px;
+  text-align: center;
+  overflow: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  gap: 5px;
+}
+
+.btn {
+  background-color: aqua;
+  border: none;
+  height: 50px;
+  width: 100px;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  background-color: brown;
+}
+
+.btn {
+  font-size: 20px;
+}
+
+.top {
+  height: 2px;
+  width: 90%;
+  display: block;
+  margin: auto;
+  background-color: black;
+  border: none;
+  margin-top: 23px;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+
+.note {
+  height: 23rem;
+  width: 100%;
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.note-time {
+  font-size: 12px;
+  color: gray;
+  text-align: left;
+  margin: 10px;
+}
+
+.inside {
+  height: 2px;
+  display: block;
+  background-color: black;
+}
+
+.essentials {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px 8px;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.fill {
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.fill.favorite {
+  color: red;
+  animation: favorite-pulse 0.3s ease;
+}
+
+@keyframes favorite-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.note textarea {
+  width: 90%;
+  height: 70%;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: auto;
+  display: block;
+  background-color: transparent;
+}
+
+.note textarea:focus {
+  background-color: #f9f9f9;
+}
+
+/* Save Notification */
+.save-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.save-notification.show {
+  opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    width: 95vw;
+    height: 85vh;
+  }
+
+  .notes {
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  }
+
+  .note {
+    height: 20rem;
+  }
+
+  .btn {
+    width: 90px;
+    height: 45px;
+  }
+
+  .note-time {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  .essentials {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    height: 80vh;
+  }
+
+  .notes {
+    grid-template-columns: 1fr;
+  }
+
+  .note {
+    height: 18rem;
+  }
+
+  .note-time {
+    font-size: 8px;
+  }
+
+  .btn {
+    width: 80px;
+    height: 40px;
+  }
+
+  .essentials {
+    font-size: 20px;
+  }
+}
