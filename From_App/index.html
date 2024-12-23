@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://yt3.googleusercontent.com/_Khb5mDwURgFmAK9LfWxvuhmnDJ0iNVJlyuyUuPke48H1zYEb7oDdOU8v0jRlz80JrfxwHfc7q4=s160-c-k-c0x00ffffff-no-rj" alt="Logo" />
+            <h3>Welcome to Sushank Form</h3>
+        </div>
+        <form name="submit-to-google-sheet">
+            <div class="form-group">
+                <label for="First-name">First Name:</label>
+                <input type="text" name="First-name" placeholder="Enter first name" required />
+            </div>
+            <div class="form-group">
+                <label for="Middle-name">Middle Name:</label>
+                <input type="text" name="Middle-name" placeholder="Enter middle name" />
+            </div>
+            <div class="form-group">
+                <label for="Last-name">Last Name:</label>
+                <input type="text" name="Last-name" placeholder="Enter last name" required />
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone No:</label>
+                <input type="tel" name="phone" placeholder="Enter phone number" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Enter email address" required />
+            </div>
+            <div class="form-group">
+                <label for="provinces">Provinces:</label>
+                <select name="provinces" required>
+                    <option value="">---</option>
+                    <option value="Lumbini">Lumbini</option>
+                    <option value="Bagmati">Bagmati</option>
+                    <option value="Sudurpashchim">Sudurpashchim</option>
+                    <option value="Madhesh">Madhesh</option>
+                    <option value="Koshi">Koshi</option>
+                    <option value="Gandaki">Gandaki</option>
+                    <option value="Karnali">Karnali</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="institute">School Name:</label>
+                <input type="text" name="institute" placeholder="Enter school name" required />
+            </div>
+            <div class="form-group">
+                <label for="suggestions">Suggestions:</label>
+                <textarea  name="suggestions" placeholder="Enter your suggestions" ></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
